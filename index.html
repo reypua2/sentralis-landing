@@ -780,8 +780,9 @@
     const ariaImg = document.getElementById('ariaImg');
     ariaImg.onload = () => {
       ariaImg.style.display = 'block';
-      document.getElementById('ariaPlaceholder').style.display = 'none';
-      document.querySelector('.aria-placeholder-label').style.display = 'none';
+ariaImg.onerror = () => {
+  console.log('Aria image failed to load');
+};
     };
 
     // Waitlist count
