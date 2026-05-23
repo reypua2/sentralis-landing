@@ -1,7 +1,11 @@
-[build]
+﻿[build]
 builder = "nixpacks"
+buildCommand = "npm install"
 
 [deploy]
-startCommand = "npm start"
+startCommand = "node server.js"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
+
+[variables]
+NIXPACKS_NODE_VERSION = "20"
